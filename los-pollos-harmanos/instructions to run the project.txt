@@ -1,0 +1,8 @@
+1) Install nodejs v22.15.0
+
+2) Add Path to environment variable
+C:\Program Files\nodejs\node_modules\npm\bin
+
+3) Open terminal in root directory and Run
+npm install
+npm run dev
