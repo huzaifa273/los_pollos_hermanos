@@ -49,4 +49,7 @@
     .footer-copyright{
         text-align: center;
     }
+    .footer-content-left-image {
+        width: 340px;
+    }
 }

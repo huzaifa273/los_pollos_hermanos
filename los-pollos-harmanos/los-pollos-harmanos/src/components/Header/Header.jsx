@@ -8,7 +8,8 @@ const Header = () => {
             <h2>Fuel Your Day the Los Pollos Way</h2>
             <p>At Los Pollos Hermanos, we believe in precision—whether it’s our crispy chicken or our impeccable service. Every dish is crafted with the finest ingredients (and a side of discretion). After all, satisfaction isn’t just a goal—it’s a requirement.
             </p>
-            <button>View Menu</button>
+            <a href="#explore-menu" className='view-menu-button'><button>View Menu</button></a>
+            
         </div>
       
     </div>

@@ -1,3 +1,64 @@
+.login-popup-error {
+  color: #ff4d4f;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.close-icon {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.close-icon:hover {
+  transform: scale(1.1);
+}
+
+.warning-icon {
+  width: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.loader-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.auth-toggle-text span {
+  color: #0066cc;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-toggle-text span:hover {
+  color: #004499;
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+input[disabled] {
+  background-color: #f5f5f5;
+}
+
+
+/* ///////////////////////////////////////////////// */
+
 .login-popup{
     position: absolute;
     z-index: 1;

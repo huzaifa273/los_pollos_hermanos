@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='footer' id='footer'>
         <div className="footer-content">
             <div className="footer-content-left">
-               <img src={assets.logo} alt='' />
+               <img src={assets.logo} alt='' className='footer-content-left-image' />
                <p>Tomato is a vibrant restaurant celebrating the versatility of tomatoes. Located in the heart of the city, we offer 
                 a menu brimming with fresh, locally sourced tomato-based dishes—from savory soups and salads to creative small plates 
                 and desserts. Enjoy a warm, inviting atmosphere and a memorable dining experience with every bite</p>

@@ -8,6 +8,14 @@
     color: grey;
     font-size: max(1vw,12px);  
 }
+.remove-button {
+    padding:  5px 20px;
+    background-color: #f3f508;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #a93b2b;
+}
 .cart-items-item{
     margin: 10px 0px;
     color: black;
@@ -45,8 +53,8 @@
 }
 .cart-total button{
     border: none;
-    color: white;
-    background-color: tomato;
+    color: #a93b2b;
+    background-color: #f3f508;
     width: max(15vw,200px);
     padding: 12px 0px;
     border-radius: 4px;

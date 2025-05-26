@@ -13,6 +13,31 @@ const Cart = () => {
     return <div>Loading...</div>;
   }
 
+  // Prepare cart items with full details
+  const getCartItemsWithDetails = () => {
+    return food_list.filter(item => cartItems[item._id] > 0)
+                   .map(item => ({
+                     ...item,
+                     quantity: cartItems[item._id]
+                   }));
+  };
+
+  const proceedToCheckout = () => {
+    const itemsWithDetails = getCartItemsWithDetails();
+    const totals = {
+      subtotal: getTotalCartAmount(),
+      deliveryFee: getTotalCartAmount() === 0 ? 0 : 2,
+      total: getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2
+    };
+    
+    navigate("/order", { 
+      state: { 
+        cartItems: itemsWithDetails,
+        totals: totals
+      } 
+    });
+  };
+
   return (
     <div className="cart">
       <div className="cart-items">
@@ -37,7 +62,7 @@ const Cart = () => {
                   <p>{cartItems[item._id]}</p>
                   <p>${item.price * cartItems[item._id]}</p>
                   <p>
-                    <button onClick={() => removeFromCart(item._id)}>
+                    <button className="remove-button" onClick={() => removeFromCart(item._id)}>
                       Remove
                     </button>
                   </p>
@@ -67,9 +92,9 @@ const Cart = () => {
               <p>${getTotalCartAmount()===0?0:getTotalCartAmount() + 2}</p>
             </div>
           </div>
-          <button onClick={() => navigate("/order")}>
-            PROCEED TO CHECKOUT
-          </button>
+          <button onClick={proceedToCheckout}>
+    PROCEED TO CHECKOUT
+  </button>
         </div>
 
         <div className="cart-promocode">

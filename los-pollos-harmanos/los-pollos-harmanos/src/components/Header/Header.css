@@ -35,6 +35,9 @@
     border-radius: 50px;
     
 }
+.view-menu-button {
+    cursor: pointer;
+}
 @media (max-width:1050px){
     .header-contents{
         max-width: 45%;
